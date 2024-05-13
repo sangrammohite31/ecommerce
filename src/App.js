@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { useState } from 'react';
+let go = ()=>{
+  alert ("welocme to my first app")
+}
 function App() {
+
+  let[status, setsatus ] = useState(false);
+
+  let [menustatus , setmenustatus] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='menu'></div>
+   <input type={status?"name":"password"}></input><button className='bg-[red]' onClick={()=>setsatus(!status)}>{status?"hide":"Show"}</button>
     </div>
   );
 }

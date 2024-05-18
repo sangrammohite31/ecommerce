@@ -1,3 +1,5 @@
+
+
 .menu{
   width: 50%;
   position: fixed;
@@ -31,7 +33,8 @@
   height: 100%;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
-display: none;
+  transition: 1.5s;
+display: block;
 
 }
 .showoverlay{
@@ -39,20 +42,25 @@ display: none;
   
 }
 
-.showmodaldiv{
-  top: 50%;
-}
+
 .modaldiv{
   width: 320px;
   height: 320px;background-color: white;
   position: fixed;
   left: 50%; 
-  transition: 0.5s;
+  transition: 1.5s;
   top: -500px;
   transform: translate(
     -50%,-50%
   );
 }
+.showmodaldiv{
+  top: 50%;
+  transition: 0.5s;
+ 
+  
+}
+
 .enbtn{
   position: fixed;
   right: 0px;
